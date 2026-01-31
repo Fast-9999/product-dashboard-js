@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.toolbar {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+input, select {
+    padding: 8px;
+    font-size: 16px;
+}
+
+/* --- YÊU CẦU: Table Styles --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #333;
+    color: white;
+    cursor: pointer; /* Cho biết cột có thể click để sort */
+}
+
+/* YÊU CẦU: 1 dòng đen (xám đậm) và 1 dòng trắng */
+tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* Dòng lẻ màu trắng */
+    color: #000;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Dòng chẵn màu xám (hoặc đen nhạt tùy chỉnh) */
+    color: #000;
+}
+/* Nếu bạn muốn "đen" thực sự như yêu cầu gắt hơn:
+tbody tr:nth-child(even) { background-color: #000; color: #fff; } 
+Nhưng màu xám #f2f2f2 dễ nhìn hơn cho dashboard. */
+
+/* YÊU CẦU: Hiển thị toàn bộ hình */
+img.product-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain; /* Đảm bảo thấy toàn bộ hình, không bị cắt */
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+/* YÊU CẦU: Ẩn description, hiện khi hover */
+.desc-content {
+    opacity: 0; /* Ẩn nội dung */
+    transition: opacity 0.3s;
+    max-width: 300px;
+    font-size: 14px;
+}
+
+/* Khi rê chuột vào dòng (tr), thì hiện description lên */
+tr:hover .desc-content {
+    opacity: 1;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+button {
+    padding: 8px 16px;
+    cursor: pointer;
+}
